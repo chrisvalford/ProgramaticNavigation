@@ -62,6 +62,7 @@
 		2FA814502AC3747200894729 /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
 		2FA814532AC383AC00894729 /* ImageWithBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageWithBadge.swift; sourceTree = "<group>"; };
 		2FA814552AC3848600894729 /* CartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartModel.swift; sourceTree = "<group>"; };
+		2FA814572AC3881100894729 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +93,7 @@
 		2FA814082AC3466800894729 = {
 			isa = PBXGroup;
 			children = (
+				2FA814572AC3881100894729 /* README.md */,
 				2FA814132AC3466800894729 /* ProgramaticNavigation */,
 				2FA814242AC3466B00894729 /* ProgramaticNavigationTests */,
 				2FA8142E2AC3466B00894729 /* ProgramaticNavigationUITests */,
