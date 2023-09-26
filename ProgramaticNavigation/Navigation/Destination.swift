@@ -7,11 +7,12 @@
 
 import SwiftUI
 
-enum Destination: CaseIterable, Identifiable {
+enum Destination {
     case empty
     case simpleView
     case productList
     case cartView
+    case productDetail(Product)
 
     var id: String { return title }
 
@@ -21,6 +22,7 @@ enum Destination: CaseIterable, Identifiable {
         case .simpleView: return "Simple View"
         case .productList: return "Product List"
         case .cartView: return "Cart"
+        case .productDetail: return ""
         }
     }
 
@@ -35,6 +37,9 @@ enum Destination: CaseIterable, Identifiable {
             ProductList()
         case .some(.cartView):
             CartView()
+        case .some(.productDetail(let product)):
+            ProductDetail(product: product)
+
         default:
             EmptyView()
         }

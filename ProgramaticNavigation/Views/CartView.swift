@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct CartView: View {
+
+    @ObservedObject var model = CartModel()
+
     var body: some View {
-        List(Product.cartItems) { product in
+        List(model.cartItems) { product in
             HStack {
                 VStack(alignment: .leading) {
                     Text(product.name)

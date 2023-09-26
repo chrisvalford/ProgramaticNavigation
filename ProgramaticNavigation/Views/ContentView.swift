@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State private var selectedDestination: Destination? = .empty
+    @ObservedObject var cartModel = CartModel()
+
+    // Desinations this view supports
     let simpleView = Destination.simpleView
     let productList = Destination.productList
     let cartView = Destination.cartView
@@ -25,7 +27,7 @@ struct ContentView: View {
                 NavigationLink {
                     productList.view(for: productList)
                 } label: {
-                    Text(productList.title).tag(productList)
+                    Text(productList.title)
                         .frame(height: 44)
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
@@ -38,7 +40,7 @@ struct ContentView: View {
                 NavigationLink {
                     cartView.view(for: cartView)
                 } label: {
-                    Image(systemName: "cart") //.tag(cartView)
+                    ImageWithBadge(value: cartModel.count)
                 }
             }
         }

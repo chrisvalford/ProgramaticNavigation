@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct ProductList: View {
+
+    @StateObject var productModel = ProductModel()
+
     var body: some View {
-        List(Product.products) { product in
+        List(productModel.products) { product in
             NavigationLink {
-                ProductDetail(product: product)
+                Destination.productList.view(for: Destination.productDetail(product))
             } label: {
                 ProductRow(product: product)
             }
