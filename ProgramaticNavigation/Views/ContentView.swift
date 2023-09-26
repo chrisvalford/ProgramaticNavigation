@@ -10,16 +10,16 @@ import SwiftUI
 struct ContentView: View {
 
     @State private var selectedDestination: Destination? = .empty
-    let itemA = Destination.viewA
-    let itemB = Destination.viewB
-    let itemC = Destination.viewC
+    let itemA = Destination.simpleView
+    let itemB = Destination.productList
+    let itemC = Destination.kartView
 
     var body: some View {
         NavigationView {
             VStack {
 
                 // Ordinary navigation link
-                NavigationLink("View A", destination: itemA.view(for: itemA))
+                NavigationLink(itemA.title, destination: itemA.view(for: itemA))
 
                 // Navigation link in the style of a button
                 NavigationLink {

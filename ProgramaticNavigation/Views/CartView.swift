@@ -1,5 +1,5 @@
 //
-//  ViewA.swift
+//  CartView.swift
 //  ProgramaticNavigation
 //
 //  Created by Christopher Alford on 26/9/23.
@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct ViewA: View {
+struct CartView: View {
     var body: some View {
-        Text("View A")
-            .navigationTitle("View A")
+        Text("CartView")
+            .navigationTitle("Cart")
     }
 }
 
 #Preview {
-    ViewA()
+    CartView()
 }

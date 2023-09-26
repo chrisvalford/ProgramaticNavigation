@@ -9,18 +9,18 @@ import SwiftUI
 
 enum Destination: CaseIterable, Identifiable {
     case empty
-    case viewA
-    case viewB
-    case viewC
+    case simpleView
+    case productList
+    case kartView
 
     var id: String { return title }
 
     var title: String {
         switch self {
         case .empty: return ""
-        case .viewA: return "View A"
-        case .viewB: return "View B"
-        case .viewC: return "View C"
+        case .simpleView: return "Simple View"
+        case .productList: return "Product List"
+        case .kartView: return "Cart"
         }
     }
 
@@ -29,12 +29,12 @@ enum Destination: CaseIterable, Identifiable {
         switch destination {
         case .some(.empty):
             EmptyView()
-        case .some(.viewA):
-            ViewA()
-        case .some(.viewB):
-            ViewB()
-        case .some(.viewC):
-            ViewC()
+        case .some(.simpleView):
+            SimpleView()
+        case .some(.productList):
+            ProductList()
+        case .some(.kartView):
+            CartView()
         default:
             EmptyView()
         }
