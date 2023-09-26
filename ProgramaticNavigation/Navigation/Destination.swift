@@ -11,7 +11,7 @@ enum Destination: CaseIterable, Identifiable {
     case empty
     case simpleView
     case productList
-    case kartView
+    case cartView
 
     var id: String { return title }
 
@@ -20,7 +20,7 @@ enum Destination: CaseIterable, Identifiable {
         case .empty: return ""
         case .simpleView: return "Simple View"
         case .productList: return "Product List"
-        case .kartView: return "Cart"
+        case .cartView: return "Cart"
         }
     }
 
@@ -33,7 +33,7 @@ enum Destination: CaseIterable, Identifiable {
             SimpleView()
         case .some(.productList):
             ProductList()
-        case .some(.kartView):
+        case .some(.cartView):
             CartView()
         default:
             EmptyView()

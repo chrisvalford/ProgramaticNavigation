@@ -10,22 +10,22 @@ import SwiftUI
 struct ContentView: View {
 
     @State private var selectedDestination: Destination? = .empty
-    let itemA = Destination.simpleView
-    let itemB = Destination.productList
-    let itemC = Destination.kartView
+    let simpleView = Destination.simpleView
+    let productList = Destination.productList
+    let cartView = Destination.cartView
 
     var body: some View {
         NavigationView {
             VStack {
 
                 // Ordinary navigation link
-                NavigationLink(itemA.title, destination: itemA.view(for: itemA))
+                NavigationLink(simpleView.title, destination: simpleView.view(for: simpleView))
 
                 // Navigation link in the style of a button
                 NavigationLink {
-                    itemB.view(for: itemB)
+                    productList.view(for: productList)
                 } label: {
-                    Text(itemB.title).tag(itemB)
+                    Text(productList.title).tag(productList)
                         .frame(height: 44)
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
@@ -36,9 +36,9 @@ struct ContentView: View {
             .toolbar {
                 // Toolbar navigation link
                 NavigationLink {
-                    itemC.view(for: itemC)
+                    cartView.view(for: cartView)
                 } label: {
-                    Image(systemName: "cart").tag(itemC)
+                    Image(systemName: "cart") //.tag(cartView)
                 }
             }
         }

@@ -9,8 +9,19 @@ import SwiftUI
 
 struct CartView: View {
     var body: some View {
-        Text("CartView")
-            .navigationTitle("Cart")
+        List(Product.cartItems) { product in
+            HStack {
+                VStack(alignment: .leading) {
+                    Text(product.name)
+                        .font(.title3)
+                    Text(product.material)
+                }
+                Spacer()
+                Text("\(product.quantity)")
+            }
+        }
+        .listStyle(.plain)
+        .navigationTitle("Cart")
     }
 }
 

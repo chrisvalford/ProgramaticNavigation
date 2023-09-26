@@ -30,4 +30,12 @@ extension Product {
         Product(id: UUID(), name: "16mm Cable gland", material: "Nylon", quantity: 80),
         Product(id: UUID(), name: "12mm Black heatshrink", material: "PVC", quantity: 6)
     ]
+
+    static let cartItems: [Product] = [
+        Product(id: UUID(), name: "M6 Plain nut", material: "A4", quantity: 20),
+        Product(id: UUID(), name: "M5x12 Pillar", material: "Brass", quantity: 8),
+        Product(id: UUID(), name: "M12x40 set screw", material: "A4", quantity: 2),
+        Product(id: UUID(), name: "3x50 Split pin", material: "A4", quantity: 10),
+        Product(id: UUID(), name: "12mm Black heatshrink", material: "PVC", quantity: 2)
+    ]
 }
